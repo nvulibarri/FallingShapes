@@ -1,0 +1,280 @@
+body {
+    background: black;
+    color: white;
+  }
+  
+  .grid-container {
+    display: grid;
+  }
+  
+  .header {
+    background: #008000;
+    width: 100%;
+    min-width: 250px;
+    height: 30px;
+    font-size: 1.5em;
+    text-align: center;
+  }
+  
+  .oval {
+    position: absolute;
+    left: 10%;
+    width: 20px;
+    height: 50px;
+    opacity: 0;
+    background-color: #008080;
+    border-radius: 50%;
+    animation-name: oval;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes oval{
+    0% {transform: rotateZ(0deg); top: 30px;}
+    1% {opacity: 1;}
+    92% {opacity: 1;}
+    100% {transform: rotateZ(360deg) rotateY(180deg); top: 80%; opacity: 0;}
+  }
+  
+  
+  .triangle { 
+    position: absolute;
+    left: 25%;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 50px solid #ff69b4;
+    animation-name: triangle;
+    animation-duration: 5s;
+    animation-delay: 5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+  }
+  
+  
+  @keyframes triangle{
+    0% {transform: rotateZ(0deg); top: 30px;}
+    1% {opacity: 1;}
+    92% {opacity: 1;}
+    100% {transform: rotateZ(360deg) rotateY(180deg); top: 80%; opacity: 0;}
+  }
+  
+  
+  
+  
+  .heart { 
+      position: absolute; 
+      left:  40%;
+      width: 100px; 
+      height: 90px;
+      opacity: 0;
+      animation-name: heart;
+      animation-duration: 5s;
+      animation-delay: 0s;
+      animation-iteration-count: 1;
+      animation-timing-function: linear;
+  } 
+  
+  .heart:before, .heart:after { 
+      position: absolute;
+      content: ""; 
+      left: 50px; 
+      top: 10px; 
+      width: 50px; 
+      height: 80px; 
+      background: #ff0000; 
+      border-radius: 50px 50px 0 0; 
+      transform: rotate(-45deg); 
+      transform-origin: 0 100%; 
+  } 
+  
+  .heart:after { 
+      left: 0; 
+      transform: rotate(45deg); 
+      transform-origin: 100% 100%;
+  }
+  
+  @keyframes heart{
+    0% {transform: rotateZ(0deg); top: 30px;}
+    1% {opacity: 1;}
+    92% {opacity: 1;}
+    100% {transform: rotateZ(360deg) rotateY(180deg); top: 80%; opacity: 0;}
+  }
+  
+  .circle {
+    position: absolute;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    background-color: #800080;
+    border-radius: 50%;
+    animation-name: circle;
+    animation-duration: 5s;
+    animation-delay: 7s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes circle{
+    0% {transform: rotateZ(0deg); top: 30px;}
+    1% {opacity: 1;}
+    92% {opacity: 1;}
+    100% {transform: rotateZ(360deg) rotateY(180deg); top: 80%; opacity: 0;}
+  }
+  
+  .parallelogram {
+    position: absolute;
+    left: 70%;
+    border-bottom: 10px solid;
+    border-left: 10px solid;
+    border-right: 10px solid;
+    border-top: 10px solid;
+    border-color: #ee82ee;
+    background-color: #ee82ee;
+    width: 120px;
+    height: 50px;
+    opacity: 0;
+    transform: skew(50deg);
+    animation-name: parallelogram;
+    animation-duration: 5s;
+    animation-delay: 9s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes parallelogram{
+    0% {transform: rotateZ(0deg); transform: skew(45deg); top: 30px;}
+    1% {opacity: 1;}
+    92% {opacity: 1;}
+    100% {transform: rotateZ(360deg) rotateY(180deg); top: 80%; opacity: 0;}
+  }
+  
+  .square {
+    position: absolute;
+    left: 89%;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    border: 10px solid #0000ff;
+    background-color: #0000ff;
+    animation-name: square;
+    animation-duration: 5s;
+    animation-delay: 12s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes square{
+    0% {transform: rotateZ(0deg); top: 30px;}
+    1% {opacity: 1;}
+    92% {opacity: 1;}
+    100% {transform: rotateZ(360deg) rotateY(180deg); top: 80%; opacity: 0;}
+  }
+  
+  .trapezoid {
+    position: absolute;
+    left: 33%;
+    border-bottom: 50px solid #ffa500;
+    border-left: 25px solid transparent;
+      border-right: 25px solid transparent;
+      height: 0;
+    opacity: 0;
+      width: 125px;
+    animation-name: trapezoid;
+    animation-duration: 5s;
+    animation-delay: 15s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+  }
+  
+  
+  @keyframes trapezoid{
+    0% {transform: rotateZ(0deg); top: 30px;}
+    1% {opacity: 1;}
+    99% {opacity: 1;}
+    100% {transform: rotateZ(360deg) rotateY(180deg); top: 80%; opacity: 0;}
+  }
+  
+  .bucket {
+    position: absolute;
+    height: 20%;
+    width: 20%;
+    top: 80%;
+    background-color: #000;
+    animation-name: bucket;
+    animation-duration: 20s;
+    animation-delay: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+  }
+  
+  
+  @keyframes bucket{
+    /*start*/
+    0% {left: 0%; background-color: #ffffff; top: 80%;}
+    11% {left: 35%; background-color: #ffffff;} /*catch heart*/
+    12% {background-color: #ff0000;} 
+    20% {left: 0%; background-color: #ff0000;}/*catch oval*/
+    21% {background-color: #008080;}
+    35% {left: 17%; background-color: #008080;} /*catch triangle*/
+    36% {background-color: #ff69b4;}
+    45% {left: 43%; background-color: #ff69b4;} /*catch circle*/
+    46% {background-color: #800080;}
+    56% {left: 66%; background-color: #800080;} /*catch parallelogram*/
+    57% {background-color: #ee82ee;}
+    70% {left: 80%; background-color: #ee82ee;} /*catch square*/
+    71% {background-color: #0000ff;} 
+    83% {left: 28%; background-color: #0000ff;} /*catch trapezoid*/
+    85% {background-color: #0000ff;}
+    87% {background-color: #ffa500; top: 80%;}
+    93% {background-color: #ffa500; left: 30%; top: 30%;}
+    94.5% {ransform: translate(1px, 1px) rotate(0deg);} 
+    95% { transform: translate(-1px, -2px) rotate(-1deg); }
+    95.5% { transform: translate(-3px, 0px) rotate(1deg); }
+    96% { transform: translate(3px, 2px) rotate(0deg); }
+    96.5% { transform: translate(1px, -1px) rotate(1deg); }
+    97% { transform: translate(-1px, 2px) rotate(-1deg); }
+    97.5% { transform: translate(-3px, 1px) rotate(0deg); }
+    98% { transform: translate(3px, 1px) rotate(-1deg); }
+    98.5% { transform: translate(-1px, -1px) rotate(1deg); }
+    99% { transform: translate(1px, 2px) rotate(0deg); }
+    99.5% { transform: translate(1px, -2px) rotate(-1deg); } 
+    100% {background-color: #ffa500; left: 30%; top: 30%; display: hidden;}
+  }
+  
+  .hidy {
+    position: absolute;
+    top: 29%; 
+    left: 29%; 
+    height: 22%; 
+    width: 22%; 
+    background: #000;
+    z-index: -1;
+  }
+  
+  
+  .bucket2 {
+      position: absolute;
+      top: 30%; 
+      left: 30%; 
+      height: 20%; 
+      width: 20%; 
+      background: linear-gradient(31deg, #008080, #ff69b4, #ff0000, #800080, #ee82ee, #0000ff, #ffa500, #008080);
+      background-size: 1000% 1000%;
+      z-index: -2;
+      animation: bucket2 15s linear infinite;
+      animation-delay: 23s;
+  }
+  
+  @keyframes bucket2 {
+    0% {background-position:78% 0%; z-index: 0;} 
+      50% {background-position:23% 100%;}
+      100% {background-position:78% 0%; z-index: 0; top: 30%;}
+  }
+  
+  
